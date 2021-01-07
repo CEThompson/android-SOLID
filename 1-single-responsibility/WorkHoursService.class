@@ -1,0 +1,7 @@
+public class WorkHoursService {
+
+	public HoursReport produceMonthlyHoursReport(Employee employee){
+		// ...
+	}
+
+}

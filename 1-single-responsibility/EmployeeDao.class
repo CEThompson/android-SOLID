@@ -1,0 +1,7 @@
+public class EmployeeDao {
+
+	public void saveModifications(Employee employee) {
+		// ...
+	}
+
+}
