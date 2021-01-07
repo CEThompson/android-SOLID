@@ -1,15 +1,18 @@
 public class AuthManager {
 
+	private String loggedInUsername = "";
+
 	public void logIn(String username, String password) {
-		// ...
+		if (username.equals("admin") && password.equals("1"))
+			loggedInUsername = username;
 	}
 
 	public void logOut() {
-		// ...
+		loggedInUsername = "";
 	}
 
 	public String getLoggedInusername() {
-		// ...
+		return loggedInUsername;
 	}
 
 }
