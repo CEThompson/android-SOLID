@@ -1,4 +1,11 @@
+enum PlayerState {
+	IDLE, PLAY_KARAOKE, PLAY_RECORDING, PAUSED
+	// etc. 
+}
+
 public class KaraokePlayer {
+
+	PlayerState state;
 
 	// Application functionality (responsibilities)
 	// 1. Parse the lyrics file - LIKELY TO CHANGE (Format change, multiple formats)
