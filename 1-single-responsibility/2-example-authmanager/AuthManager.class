@@ -1,0 +1,15 @@
+public class AuthManager {
+
+	public void logIn(String username, String password) {
+		// ...
+	}
+
+	public void logOut() {
+		// ...
+	}
+
+	public String getLoggedInusername() {
+		// ...
+	}
+
+}
