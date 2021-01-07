@@ -1,10 +1,13 @@
 public class AuthManager {
+	
+	private PasswordHasher passwordHasher;
+	private UsersDao usersDao;
 
 	private String loggedInUsername = "";
 
 	public void logIn(String username, String password) {
-		String hash = hashPassword(password);
-		if (userEntryExistsInDb(username, hash))
+		String hash = passwordHasher.hashPassword(password);
+		if (usersDao.existsWithCredentials(username, hash))
 			loggedInUsername = username;
 	}
 
@@ -14,14 +17,6 @@ public class AuthManager {
 
 	public String getLoggedInusername() {
 		return loggedInUsername;
-	}
-
-	private String hashPassword(String password) {
-		// ...
-	}
-
-	private boolean userEntryExistsInDb(String username, String hash) {
-		// ...
 	}
 
 }
