@@ -10,4 +10,13 @@ public class KaraokePlayer {
 	// 7. Stop - No change expected
 	// 8. Listen to the recording - VERY LIKELY TO CHANGE
 
+	AudioPlayer audioPlayer;
+	VideoPlayer videoPlayer;
+	AudioRecorder audioRecorder;
+
+	LyricsParser lyricsParser;
+	TimingsParser timingsParser;
+	LyricsTextPlayer lyricsTextPlayer;
+	RecordingsPlayer recordingsPlayer;
+
 } 
