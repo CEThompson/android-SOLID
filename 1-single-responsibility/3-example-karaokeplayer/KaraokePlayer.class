@@ -17,6 +17,11 @@ public class KaraokePlayer {
 	LyricsParser lyricsParser;
 	TimingsParser timingsParser;
 	LyricsTextPlayer lyricsTextPlayer;
-	RecordingsPlayer recordingsPlayer;
+	RecordingsManager recordingsManager;
 
 } 
+
+public class RecordingsPlayer {
+
+	RecordingsManager recordingsManager;
+}
