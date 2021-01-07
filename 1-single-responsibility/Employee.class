@@ -1,0 +1,17 @@
+public class Employee {
+
+	public BigDecimal calculateMonthlySalary(){
+		// ...
+		HoursReport hoursReport = produceMonthlyHoursReport();
+		// ...
+	}
+
+	public HoursReport produceMonthlyHoursReport(){
+		// ...
+	}
+
+	public void saveModifications(){
+		// ...
+	}
+
+}
