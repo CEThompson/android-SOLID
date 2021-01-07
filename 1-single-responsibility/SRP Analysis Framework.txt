@@ -1,0 +1,6 @@
+
+1. List all requirements
+
+2. Analyze each item in the list for potential reasons to change
+
+3. Extract functionalities that change into standalone classes
