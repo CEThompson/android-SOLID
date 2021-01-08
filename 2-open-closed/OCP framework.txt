@@ -1,0 +1,9 @@
+
+1. Apply OCP initially only when you are certain about the nature of future changes
+	(intrinsic stability in business domain, or experience)
+
+2. Monitor changes in requirements and extract useful abstractions as you go
+
+
+** Proper utilization of OCP allows you to provide additional business value quickly and safely!
+ 
