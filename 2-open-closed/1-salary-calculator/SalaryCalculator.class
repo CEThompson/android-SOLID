@@ -1,26 +1,42 @@
 public class SalaryCalculator {
 
-	private TaxCalculator taxCalculator;
+	private TaxCalculatorFactory taxCalculatorFactory;
 
 	public Salary calculateSalary(Employee employee) {
 		...
+		TaxCalculator taxCalculator = taxCalculatorFactory.newTaxCalculator(employee.getType());
 		BigDecimal taxDeduction = taxCalculator.calculateTax(employee);
 		...
 	}
 
 }
 
-public class TaxCalculator {
+public interface TaxCalculator {
+	BigDecimal calculateTax(Employee employee);
+}
 
+public class TaxCalculatorFreelance implements TaxCalculator {
 	private BigDecimal calculateTax(Employee employee) {
-
-		switch (employee.getType()) {
-			case FULL_TIME:
-				...
-			case FREELANCE:
-				...
-		}
-		
+		// calculate for freelance		
 	}
+}
 
+public class TaxCalculatorFulltime implements TaxCalculator {
+	private BigDecimal calculateTax(Employee employee) {
+		// calculate for fulltime		
+	}
+}
+
+
+public class TaxCalculatorFactory {
+	public TaxCalculator newTaxCalculator(EmployeeType employeeType){
+		switch (employeeType){
+			case FULL_TIME:
+				return new TaxCalculatorFullTime();
+			case FREELANCE:
+				return new TaxCalculatorFreelance();
+			default:
+				return new TaxCalculatorDefault();
+		}
+	}
 }
