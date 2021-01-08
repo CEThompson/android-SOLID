@@ -21,12 +21,26 @@ public class KaraokePlayer {
 	VideoPlayer videoPlayer;
 	AudioRecorder audioRecorder;
 
-	LyricsParser lyricsParser;
+	// Use open-closed principle to prepare for change
+	// In lyrics parsing formats
+	LyricsParserFactory lyricsParserFactory;	
+	LyricsParserAbstraction lyricsParserAbstraction;
+	
+
 	TimingsParser timingsParser;
 	LyricsTextPlayer lyricsTextPlayer;
 	RecordingsManager recordingsManager;
 
 } 
+
+// Add implementations of lyrics parser abstraction 
+public class LyricsParserFormat1 implements LyricsParserAbstraction {
+	//
+}
+
+// Add factory to construct different implementations of lyrics parser abstractions
+public class LyricsParserFactory {...}
+
 
 public class RecordingsPlayer {
 
