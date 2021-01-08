@@ -1,0 +1,34 @@
+enum PlayerState {
+	IDLE, PLAY_KARAOKE, PLAY_RECORDING, PAUSED
+	// etc. 
+}
+
+public class KaraokePlayer {
+
+	PlayerState state;
+
+	// Application functionality (responsibilities)
+	// 1. Parse the lyrics file - LIKELY TO CHANGE (Format change, multiple formats)
+	// 2. Parse the lyrics' timings file - LIKELY TO CHANGE (Format change, multiple formats)
+	// 3. Play the karaoke video file - No change expected
+	// 4. Overlay the lyrics over the video on the screen and sync with sound - VERY LIKELY TO CHANGE (business requirements?)
+	// 5. Record singer's voice  - No change expected
+	// 6. Pause - No change expected
+	// 7. Stop - No change expected
+	// 8. Listen to the recording - VERY LIKELY TO CHANGE
+
+	AudioPlayer audioPlayer;
+	VideoPlayer videoPlayer;
+	AudioRecorder audioRecorder;
+
+	LyricsParser lyricsParser;
+	TimingsParser timingsParser;
+	LyricsTextPlayer lyricsTextPlayer;
+	RecordingsManager recordingsManager;
+
+} 
+
+public class RecordingsPlayer {
+
+	RecordingsManager recordingsManager;
+}
