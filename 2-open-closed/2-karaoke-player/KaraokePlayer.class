@@ -26,9 +26,10 @@ public class KaraokePlayer {
 	LyricsParserFactory lyricsParserFactory;	
 	LyricsParserAbstraction lyricsParserAbstraction;
 	
+	TimingsParser timingsParser; // Apply same to this ONLY if it is likely to change
+	LyricsTextPlayer lyricsTextPlayer; // Apply same to this ONLY if it is likely to change
 
-	TimingsParser timingsParser;
-	LyricsTextPlayer lyricsTextPlayer;
+
 	RecordingsManager recordingsManager;
 
 } 
