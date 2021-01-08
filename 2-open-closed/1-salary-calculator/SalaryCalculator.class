@@ -9,3 +9,18 @@ public class SalaryCalculator {
 	}
 
 }
+
+public class TaxCalculator {
+
+	private BigDecimal calculateTax(Employee employee) {
+
+		switch (employee.getType()) {
+			case FULL_TIME:
+				...
+			case FREELANCE:
+				...
+		}
+		
+	}
+
+}
