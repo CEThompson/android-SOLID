@@ -1,20 +1,11 @@
 public class SalaryCalculator {
 
+	private TaxCalculator taxCalculator;
+
 	public Salary calculateSalary(Employee employee) {
 		...
-		BigDecimal taxDeduction = calculateTax(employee);
+		BigDecimal taxDeduction = taxCalculator.calculateTax(employee);
 		...
-	}
-
-	private BigDecimal calculateTax(Employee employee) {
-
-		switch (employee.getType()) {
-			case FULL_TIME:
-				...
-			case FREELANCE:
-				...
-		}
-		
 	}
 
 }
