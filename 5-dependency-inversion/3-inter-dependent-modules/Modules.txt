@@ -1,0 +1,22 @@
+
+// team A  depends on services from team B
+// this leads to a number of issues
+// 1. Team A is directly affected by the schedule of team B
+// 2. Team A has no control over the interfaces and the semantics of the services
+// 3. Team A can't finish before team B
+
+
+moduleA {
+	moduleB.Service1;
+	moduleB.Service2;
+	moduleB.Service3;
+}
+
+
+moduleB {
+	
+	Service1{}
+	Service2{}
+	Service3{}
+
+}
