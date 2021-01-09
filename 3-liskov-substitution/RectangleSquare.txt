@@ -9,3 +9,22 @@ public class Rectangle {
 public class Square extends Rectangle {
 	// overrides...
 }
+
+// 1. Contravariance of arguments: both classes have same arguments so this rule is followed
+// 2. Covariance of results: both classes do not return results from methods so this rule is followed 
+// 3. Exception rule: no exceptions thrown so this rule is followed
+
+// 4. Precondition rule: seems that this rule is followed
+// 5. Postcondition rule: seems that this rule is followed
+
+// 6. Invariant rule: square class adds 1 additional invariant
+	// Square invariant: width = height
+	// This rule is not exactly violated, 
+	// but the constraints on setwidth/setheight
+	// would make this invariant impossible
+
+// 7. Constraint rule: constraints of rect set width is that it changes to width set afterwards
+	// ALSO it will not change height
+	// However in square setwidth must change setheight to satisfy invariant
+	// Therefore in this specific case the constraint rule is in violation
+
