@@ -1,0 +1,20 @@
+// Note both classes depend upon each other (circular dependencies)
+// Service cannot be used from other clients, cannot be reused 
+
+
+Client {
+	- Service;
+	+ doSomething(){
+		doSomethingPhaseOne();
+		service.doSomethingAsync(this);
+	}
+	- doSomethingPhaseOne(){}
+	+ doSomethingPhaseTwo(){}
+}
+
+Service {
+	+ doSomethingAsync(Client client){
+		...
+		client.doSomethingPhaseTwo();
+	}
+}
