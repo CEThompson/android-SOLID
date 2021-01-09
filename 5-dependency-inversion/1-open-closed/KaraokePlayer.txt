@@ -1,0 +1,14 @@
+// Dependency Inversion in action
+// KaraokePlayer is protected from changes in lyrics parser functionality
+
+// Dependency Inversion provides protection from changing requirements
+
+KaraokePlayer {
+	AbstractLyricsParser absParser;
+}
+
+abstract AbstractLyricsParser {
+}
+
+LyricsParser1 implements AbstractLyricsParser {
+}
