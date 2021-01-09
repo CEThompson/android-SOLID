@@ -1,0 +1,15 @@
+Primary benefits of DIP
+
+1. Protection from future changes in requirements
+2. Reusability
+3. Break dependency on external modules
+4. Easier integration between modules
+5. Better visibility and accountability
+
+Costs
+1. More effort to implement
+2. More effort to change (wrong abstraction can be more expensive than no abstraction)
+3. Increased code complexity due to indirection (Biggest code of DIP) 
+
+
+**** Invert dependencies only when the benefits outweigh the costs
