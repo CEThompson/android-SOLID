@@ -1,0 +1,24 @@
+// Hierarchy is the natural outcome
+// Flow of control goes from top of hierarchy to the bottom
+
+
+BusinessDomainClass {
+	// depends on FunctionalClass1
+	// depends on FunctionalClass2
+}
+
+FunctionalClass1{
+	// depends on FunctionalClass3
+}
+
+FunctionalClass2{
+
+}
+
+FunctionalClass3{
+	// depends on FunctionalClass4
+}
+
+FunctionalClass4{
+
+}
