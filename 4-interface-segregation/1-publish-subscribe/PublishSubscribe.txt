@@ -1,0 +1,26 @@
+// Source must publish to target without depending upon it
+class Source {
+	// Source depends on event bus
+	// Whenever it calls publish(Event) message will be sent to target
+}
+
+
+// Note: Event buses can make your code unmaintainable
+// Opinion: Classes that are both publishers and subscribers are a code smell
+class EventBus {
+	// EventBus depends upon subscriber abstration
+	+ subscribe(Subscriber)
+	+ unsubscribe(Subscriber)
+	+ publish(Event)
+}
+
+interface Subscriber {
+	+ onEvent(event)
+}
+
+
+class Target {
+	// Target realizes subscriber
+	+ onEvent(event)
+	// Target depends upon eventbus and subscribes / unsubscribes
+}
