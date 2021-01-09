@@ -2,23 +2,20 @@
 // Flow of control goes from top of hierarchy to the bottom
 
 
-BusinessDomainClass {
-	// depends on FunctionalClass1
-	// depends on FunctionalClass2
+TopLevelClass {
+	MidLevelClass;
 }
 
-FunctionalClass1{
-	// depends on FunctionalClass3
+
+MidLevelClass {
+	BottomLevelClass1;
+	BottomLevelClass2;
 }
 
-FunctionalClass2{
-
+BottomLevelClass1 {
+	BottomLevelClass2;
 }
 
-FunctionalClass3{
-	// depends on FunctionalClass4
-}
-
-FunctionalClass4{
+BottomLevelClass2 {
 
 }
