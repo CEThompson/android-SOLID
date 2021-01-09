@@ -1,0 +1,4 @@
+1. Explicit and clear dependencies
+2. More readable code without empty methods
+3. Easy to find all clients which are interested in specific messages
+4. Safe and easy to add new message types in the future
