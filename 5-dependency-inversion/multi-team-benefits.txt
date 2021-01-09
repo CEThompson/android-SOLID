@@ -1,0 +1,6 @@
+
+Benefits of dependency inversion for multi-team projects
+
+1. Break dependency on the schedule of another component
+2. Easier integration
+3. Increase visibility and better accountability for the entire organization
