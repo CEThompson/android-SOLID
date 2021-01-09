@@ -1,3 +1,13 @@
+High Level Benefits
+
+1. Communicates what clients do with their services
+2. Communicates what clients don't do with their services
+3. Restricts what clients can do with their services
+4. (Segregated interfaces) Allows segregated functionality if/when needed
+	[Great for refactoring legacy code]
+
+Specific to 2-big-callback
+
 1. Explicit and clear dependencies
 2. More readable code without empty methods
 3. Easy to find all clients which are interested in specific messages
