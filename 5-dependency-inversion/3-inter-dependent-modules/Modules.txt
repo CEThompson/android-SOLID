@@ -6,17 +6,16 @@
 // 3. Team A can't finish before team B
 
 
+// team A now depends on three internal abstractions mitigating these issues
 moduleA {
-	moduleB.Service1;
-	moduleB.Service2;
-	moduleB.Service3;
+	abstract Service1; // fakes may be implemented on these services
+	abstract Service2;
+	abstract Service3;
 }
 
-
+// Now team B depends upon team A
 moduleB {
-	
-	Service1{}
-	Service2{}
-	Service3{}
-
+	Service1Impl{}
+	Service2Impl{}
+	Service3Impl{}
 }
