@@ -1,20 +1,28 @@
-// Note both classes depend upon each other (circular dependencies)
-// Service cannot be used from other clients, cannot be reused 
+// Now service may be reused
+// Dependency Inversion principle contributes to reusability
 
-
-Client {
+Client implements Callback {
 	- Service;
 	+ doSomething(){
 		doSomethingPhaseOne();
-		service.doSomethingAsync(this);
+		service.doSomethingAsync( () -> doSomethingPhaseTwo() );
 	}
 	- doSomethingPhaseOne(){}
-	+ doSomethingPhaseTwo(){}
+	- doSomethingPhaseTwo(){}
+
 }
 
-Service {
-	+ doSomethingAsync(Client client){
-		...
-		client.doSomethingPhaseTwo();
+Service implements Service.Callback {
+	interface Callback {
+		+ onDoSomethingAsyncDone()
 	}
+
+	+ doSomethingAsync(Callback callback){
+		...
+		callback.onDoSomethingAsyncDone();
+	}
+
+	@Overrides
+	onDoSomethingAsyncDone()
 }
+
