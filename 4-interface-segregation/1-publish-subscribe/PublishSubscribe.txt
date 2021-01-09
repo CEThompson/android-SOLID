@@ -1,9 +1,8 @@
 // Source must publish to target without depending upon it
 class Source {
-	// Source depends on event bus
+	// Source depends on EventBus publisher
 	// Whenever it calls publish(Event) message will be sent to target
 }
-
 
 // Note: Event buses can make your code unmaintainable
 // Opinion: Classes that are both publishers and subscribers are a code smell
@@ -14,13 +13,26 @@ class EventBus {
 	+ publish(Event)
 }
 
+class EventBusPublisher {
+	// Delegates publish to EventBus
+	+ publish(Event)
+}
+
+class EventBusSubscriber {
+	// Delegates methods to EventBus
+	+ subscribe(Subscriber)
+	+ unsubscribe(Subscriber)
+}
+
 interface Subscriber {
 	+ onEvent(event)
 }
 
 
-class Target {
-	// Target realizes subscriber
+class Target implements Subscriber {
+	// Target depends upon EventBusSubscriber and subscribes / unsubscribes
+	// ex. EventBusSubscriber eventBusSubscriber.subscribe(this)
+	
+	// Target realizes subscriber (through implementation)
 	+ onEvent(event)
-	// Target depends upon eventbus and subscribes / unsubscribes
 }
