@@ -1,0 +1,33 @@
+// Both systems communicate with each other
+Main System {} // ex. front end
+System X {} // ex. backend
+
+public class XService {
+	+ registerListener(Listener)
+	+ unregisterListener(Listener)
+}
+
+interface XListener {
+	void onMessageA()
+	void onMessageB()
+	void onMessageC()
+	void onMessageD()
+}
+
+class Client1 implements XListener {
+	// Overrides
+	// Only interested in certain overrides but overrides them all
+	void onMessageA()
+	void onMessageB()
+	void onMessageC()
+	void onMessageD()
+}
+
+class Client2 implements XListener {
+	// Overrides
+	// Only interested in certain overrides but overrides them all
+	void onMessageA()
+	void onMessageB()
+	void onMessageC()
+	void onMessageD()
+}
