@@ -3,18 +3,23 @@
 
 
 TopLevelClass {
-	MidLevelClass;
+	AbstractMidLevelClass;
 }
 
+// Midlevel class is now inverted
+// Flow of control still goes from top down
+abstract AbstractMidLevelClass {}
 
-MidLevelClass {
+MidLevelClass implements AbstractMidLevelClass {
 	BottomLevelClass1;
 	BottomLevelClass2;
 }
 
+
 BottomLevelClass1 {
 	BottomLevelClass2;
 }
+
 
 BottomLevelClass2 {
 
