@@ -1,0 +1,11 @@
+// Initial state violates liskov substitution principle
+
+public class Rectangle {
+	public void setWidth(int);
+	public void setHeight(int);
+}
+
+
+public class Square extends Rectangle {
+	// overrides...
+}
